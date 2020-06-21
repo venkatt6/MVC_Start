@@ -9,8 +9,9 @@ namespace MVC_Start.Controllers
 {
   public class HomeController : Controller
   {
-    public IActionResult Index()
+    public IActionResult Index(String id)
     {
+            ViewData["messege"] = String.IsNullOrWhiteSpace(id) ? "Hello too" : id;
       return View();
     }
 
